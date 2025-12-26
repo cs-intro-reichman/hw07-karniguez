@@ -21,7 +21,7 @@ public class Binomial {
 	 }
 	
 	// Computes the Binomial function, efficiently
-	public static int binomial(int n, int k) {
+	public static long binomial(int n, int k) {
 		
 		//// This function creates a 2D array, say memo, 
 		//// and then initializes all its elements to -1.
@@ -33,7 +33,7 @@ public class Binomial {
                 memo[i][j] = -1;
             }
         }
-        return (int)binomial(n, k, memo);
+        return binomial(n, k, memo);
 	}
 
 	private static long binomial(int n, int k, long [][] memo) {
