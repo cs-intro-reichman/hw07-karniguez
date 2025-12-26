@@ -10,9 +10,10 @@ public class IntToBin {
     public static String toBinary(int x) {
         String all = "";
         if (x == 0 || x == 1){
-            all = x + "";;
+            all = x + "";
+        } else {
+        all = toBinary(x / 2) + (x % 2) + "";
         }
-        all = toBinary(x / 2) + (x % 2);
 
         //// Replace the following statement with your code
         return all;
